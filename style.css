@@ -165,11 +165,17 @@
     transform: translate(0px);
   }
 }
-@media (max-width: 520px) {
+@media screen and (max-width:520px) {
   .hidden {
     top:90px;
     width: 50vw;
     height:60vh;
+  }
+  .navbar .logo{
+    margin-left: 0.5rem;
+  }
+  .head-title2{
+    font-size: 6.5vmax;
   }
 }
 /* .........About Us........... */
@@ -190,7 +196,7 @@
 .about-title h2 {
   margin-top: 10px;
   font-size: 2.2rem;
-  color: rgb(58, 57, 57);
+  color: rgb(29, 28, 28);
 }
 .about-para {
   color: gray;
@@ -268,9 +274,18 @@
   }
 }
 @media screen and (max-width: 582px) {
+  .about-title h2{
+    font-size: 5vmax;
+  }
   .tick-icon {
     flex-basis: 90%;
     margin: 5px 0;
+  }
+  .tick-icon span{
+    font-size: 1rem;
+  }
+  .about-btn{
+    padding: 1rem 2rem;
   }
 }
 /* ...... Services ...... */
@@ -287,8 +302,8 @@
 .service-para {
   color: rgb(29, 28, 28);
   margin: 15px 0 3rem;
-  font-size: 2.7rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 3.2vmax;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .service-container {
   text-align: center;
@@ -370,8 +385,25 @@
   .navbar .logo{
     font-size: 5.5vmax;
   }
-  .plans-container .plan-title2{
-    font-size: 6vmax;
+}
+@media screen and (max-width:480px) {
+  .s-icon{
+    left: 30%;
+  }
+  .service-card p{
+    margin: 0;
+  }
+  .service-para{
+    font-size: 4vmax;
+  }
+  .service-quote h2{
+    font-size: 8vmin;
+    margin-bottom: 1.3rem;
+    text-shadow: 2px 2px 3px gray;
+  }
+  .service-quote h1{
+    font-size: 7vmin;
+    margin-top: 1.1rem;
   }
 }
 /* ..... Plans-Container Start ..... */
@@ -388,8 +420,9 @@
   color: rgb(0, 110, 255);
 }
 .plan-title2{
-  font-size: 2.7rem;
-  color: rgb(66, 65, 65);
+  font-size: 3.2vmax;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(29, 28, 28);
   margin-bottom:1.5rem ;
 }
 .plan-cards{
@@ -455,13 +488,6 @@
   background-color: rgb(0, 195, 255);
   transform: scale(1.05);
 }
-@media screen and (max-width:839px) {
-  .plan-cards{
-  display: grid;
-  grid-template-columns:repeat(1,1fr);
-  margin: 0px;
-  }
-}
 @media screen and (min-width:840px) and (max-width:941px) {
   .plan-cards{
   display: grid;
@@ -482,6 +508,36 @@
   }
   .plan-card h1{
     font-size: 2rem;
+  }
+}
+@media screen and (max-width:839px) {
+  .plan-cards{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns:repeat(1,1fr);
+  margin: 0px;
+  }
+  .plan-title2{
+    font-size: 4vmax;
+  }
+}
+@media screen and (max-width:640px) {
+  .plans-container{
+    margin: 0 1rem;
+  }
+  .plan-title2{
+    font-size: 5vmax;
+  }
+}
+@media screen and (max-width:480px) {
+  .plans-container{
+    padding: 0 4vmin;
+  }
+  .plan-title2{
+    font-size: 4.2vmax;
+  }
+  .plan-card button{
+    padding: 10px 20px;
   }
 }
 /* Request A Quote */
@@ -588,19 +644,40 @@
 }
 @media screen and (max-width:992px) {
   .request-container{
-    /* padding: 2rem; */
     flex-direction: column;
     gap: 2.5rem;
     margin: 1rem 1.3rem 1.5rem;
   }
   .request-details{
     flex-basis: 70%;
+    margin: 0;
   }
   .request-details h2{
     font-size: 4.2vmax;
   }
   .form-details{
     flex-basis: 70%;
+    margin: 0;
+  }
+}
+@media screen and (max-width:480px) {
+  .request-container{
+    margin: 0;
+  }
+  .request-responce span{
+    font-size: 1rem;
+  }
+  .call-details{
+    margin-left: 0.3rem;
+  }
+  .call-details p{
+    font-size: 1rem;
+  }
+  .call-details h3{
+    font-size: 5.5vmin;
+  }
+  .form{
+    padding: 2rem 1rem;
   }
 }
 /* Latest-Blog*/
@@ -616,7 +693,9 @@
 }
 #blog .h2{
   margin: 1rem 0 2.5rem;
-  font-size: 2.7rem;
+  font-size: 3.2vmax;
+  color: rgb(29, 28, 28);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .blog-container{
   display: flex;
@@ -677,6 +756,11 @@
   }
   .blog-card img{
     width: 300px;
+  }
+}
+@media screen and (max-width:480px) {
+  #blog .h2{
+    font-size: 4.2vmax;
   }
 }
 @media screen and (max-width:448px) {
@@ -805,8 +889,8 @@
     flex-direction: column;
   }
   .footer-detail{
-    padding: 1.5rem;
-    margin: 1rem 8vmax;
+    padding:0.5rem 1.5rem;
+    margin: 0.5rem 8vmax;
     width: 70%;
   }
   .footer-detail h2{
@@ -814,6 +898,21 @@
   }
   .f-a{
     font-size: 3vmax;
+  }
+}
+@media screen and (max-width:360px) {
+  .footer-detail{
+    padding: 0.3rem 0.8rem;
+    margin: 0.2rem 4vmax;
+  }
+  .footer-detail p{
+    font-size: 5.5vmin;
+  }
+  .footer-detail h2{
+    font-size: 7.8vmin;
+  }
+  .f-a{
+    font-size: 5vmin;
   }
 }
 .f-li{
@@ -851,4 +950,90 @@
   padding: 1.5rem;
   text-align: center;
   background-color: rgb(6, 6, 34);
+}
+
+/* why choose us */
+#why-choose{
+  margin: 3.5rem 1rem;
+}
+.choose-title{
+  text-align: center;
+  margin-bottom: 1rem;
+  color: rgb(0, 132, 255);
+}
+.choose-subtitle{
+  text-align: center;
+  color: rgb(29, 28, 28);
+  font-size: 3.3vmax;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 3rem;
+}
+.choose-container{
+  display: flex;
+  /* border: 1px solid; */
+  padding: 1rem 0;
+  justify-content: center;
+}
+.choose-container1{
+  flex-basis: 30%;
+}
+.choose-container2{
+  flex-basis: 30%;
+  padding: 0 1.5rem;
+}
+.choose-container2 img {
+  width: 100%;
+  height: 100%;
+}
+.choose-container3{
+  flex-basis: 30%;
+}
+.choose-card{
+  /* border: 1px solid; */
+  padding: 1rem;
+}
+.choose-card i {
+  font-size: 1rem;
+  background-color: rgb(0, 170, 255);
+  padding: 1.25rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.choose-card h3 {
+  color: rgb(33, 31, 31);
+  font-family: cursive;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.choose-card p{
+  color: gray;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width:822px) {
+  .choose-subtitle{
+    font-size: 4.8vmax;
+  }
+  .choose-container{
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 3.5vmax;
+  }
+  .choose-container2 img {
+    height: 50vmax;
+  }
+}
+@media screen and (max-width:480px) {
+  .choose-subtitle{
+    font-size: 4vmax;
+  }
+  .choose-container2{
+    padding: 0;
+  }
+  .choose-container2 img{
+    width: 100%;
+    height: 100%;
+  }
+  .choose-card h3{
+    font-size: 1.1rem;
+  }
 }
