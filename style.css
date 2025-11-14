@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 .startup-details {
   display: flex;
   align-items: center;
@@ -43,7 +46,7 @@
   box-shadow: 2px 2px 4px gray;
 }
 .navbar .logo {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: white;
   margin-left: 3rem;
   text-shadow: 2px 2px 3px black;
@@ -90,7 +93,7 @@
 }
 .head-title2 {
   text-shadow: 2px 2px 4px gray, -2px -2px 4px black;
-  font-size: 8vmax;
+  font-size: 7vmax;
   margin-top: 15px;
 }
 .header-btn {
@@ -145,7 +148,7 @@
     top: 92px;
     left: 0;
     background-color: rgb(76, 184, 247,0.5);
-    box-shadow: 2px 2px 5px 2px rgb(128, 128, 128,0.4);
+    /* box-shadow: 2px 2px 5px 2px rgb(128, 128, 128,0.4); */
     transform: translateX(-100%);
     transition: all 0.5s ease;
   }
@@ -164,6 +167,23 @@
   #click:checked ~ .hidden {
     transform: translate(0px);
   }
+  .navbar{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+  }
+  .navbar .logo{
+    color: rgb(0, 136, 255);
+    text-shadow: none;
+    padding: 0;
+  }
+  .hamburger-menu{
+    color: rgb(0, 136, 255);
+  }
+  .header-content{
+    margin-top: 3rem;
+  }
 }
 @media screen and (max-width:520px) {
   .hidden {
@@ -174,8 +194,10 @@
   .navbar .logo{
     margin-left: 0.5rem;
   }
+}
+@media screen and (max-width:400px) {
   .head-title2{
-    font-size: 6.5vmax;
+    font-size: 1.95rem;
   }
 }
 /* .........About Us........... */
@@ -186,7 +208,7 @@
   max-width: 1170px;
 }
 .about-title {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 .about-title h3 {
   font-family: Arial, Helvetica, sans-serif;
@@ -226,7 +248,7 @@
 }
 .about-btn {
   cursor: pointer;
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem;
   margin: 10px 5px 1rem;
   background-color: rgb(0, 132, 255);
   font-weight: 600;
@@ -272,6 +294,10 @@
     height: 100%;
     padding: 0;
   }
+  .about-btn{
+    margin-top: 1rem;
+    padding: 1.2rem 2.8rem;
+  }
 }
 @media screen and (max-width: 582px) {
   .about-title h2{
@@ -284,16 +310,15 @@
   .tick-icon span{
     font-size: 1rem;
   }
-  .about-btn{
-    padding: 1rem 2rem;
-  }
 }
 /* ...... Services ...... */
 #services {
-  margin: 20px 10px;
+  padding-top: 2.5rem;
+  margin: 5px 10px 20px;
   text-align: center;
 }
 .service-title {
+  margin-top: 3.5rem;
   color: rgb(0, 110, 255);
   font-size: 1.2rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -383,12 +408,12 @@
     font-size: 5.5vmax;
   }
   .navbar .logo{
-    font-size: 5.5vmax;
+    font-size: 2rem;
   }
 }
 @media screen and (max-width:480px) {
   .s-icon{
-    left: 30%;
+    left: 40%;
   }
   .service-card p{
     margin: 0;
@@ -409,13 +434,13 @@
 /* ..... Plans-Container Start ..... */
 .plans-container{
   margin:0 3rem;
-  padding: 3.5rem 1rem;
+  padding: 3.2rem 1rem 2.5rem;
 }
 .plan{
   text-align: center;
 }
 .plan-title1{
-  margin-bottom: 12px;
+  margin:2.5rem 0 0.9rem;
   font-size: 1.2rem;
   color: rgb(0, 110, 255);
 }
@@ -423,7 +448,7 @@
   font-size: 3.2vmax;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: rgb(29, 28, 28);
-  margin-bottom:1.5rem ;
+  margin-bottom:2rem ;
 }
 .plan-cards{
   display: grid;
@@ -526,15 +551,16 @@
     margin: 0 1rem;
   }
   .plan-title2{
-    font-size: 5vmax;
+    font-size: 4vmax;
   }
 }
 @media screen and (max-width:480px) {
   .plans-container{
-    padding: 0 4vmin;
+    padding: 2.5rem 4vmin 0;
   }
   .plan-title2{
     font-size: 4.2vmax;
+    margin-bottom: 2rem;
   }
   .plan-card button{
     padding: 10px 20px;
@@ -662,7 +688,7 @@
 }
 @media screen and (max-width:480px) {
   .request-container{
-    margin: 0;
+    margin: 2rem 0 0;
   }
   .request-responce span{
     font-size: 1rem;
@@ -680,9 +706,77 @@
     padding: 2rem 1rem;
   }
 }
+/* Team members */
+.team-container{
+  margin: 4rem 1rem 2.5rem;
+}
+.team{
+  text-align: center;
+}
+.team-title1{
+  color: rgb(0, 183, 255);
+  margin-bottom: 1rem;
+}
+.team-title2{
+  margin-bottom: 4rem;
+  font-size: 3.2vmax;
+  color: rgb(29, 28, 28);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.member-containers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.member-container{
+  box-shadow: 2px 2px 3px 2px rgba(128, 128, 128, 0.261);
+  flex-basis: 28%;
+  text-align: center;
+  border-radius: 5px;
+}
+.member-container img{
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.member-container h3{
+  color: rgb(0, 149, 255);
+  text-shadow: 1px 1px 3px gray;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.member-container p{
+  color: gray;
+  margin: 1rem 0;
+}
+@media screen and (max-width:768px) {
+  .team-title2{
+    font-size: 4vmax;
+  }
+  .member-containers{
+  flex-direction: column;
+  }
+  .member-container{
+    flex-basis: 70%;
+  }
+  .member-container2{
+    width: 30rem;
+  }
+}
+@media screen and (max-width:515px) {
+  .team-container{
+    margin-bottom: 0;
+  }
+  .member-container2{
+    width: 100%;
+  }
+}
 /* Latest-Blog*/
 #blog{
-  padding: 3.5rem 1rem 3rem;
+  padding: 3rem 1rem 3rem;
 }
 #blog .h3,.h2{
   text-align: center;
@@ -745,7 +839,7 @@
 }
 @media screen and (max-width:992px) {
   #blog .h2{
-    font-size: 5vmax;
+    font-size: 4vmax;
   }
   .blog-container{
     flex-direction: column;
@@ -771,7 +865,7 @@
     padding: 3rem 0.5rem 2rem;
   }
   .blog-container{
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0;
   }
   .blog-card{
     margin:1rem 1.5rem;
@@ -894,7 +988,7 @@
     width: 70%;
   }
   .footer-detail h2{
-    font-size: 4.5vmax;
+    font-size: 3.7vmax;
   }
   .f-a{
     font-size: 3vmax;
@@ -909,10 +1003,13 @@
     font-size: 5.5vmin;
   }
   .footer-detail h2{
-    font-size: 7.8vmin;
+    font-size: 6.7vmin;
   }
   .f-a{
     font-size: 5vmin;
+  }
+  .copy-right{
+    font-size: 0.82rem;
   }
 }
 .f-li{
@@ -954,7 +1051,7 @@
 
 /* why choose us */
 #why-choose{
-  margin: 3.5rem 1rem;
+  margin: 3.5rem 1rem 0.5rem;
 }
 .choose-title{
   text-align: center;
@@ -989,7 +1086,6 @@
   flex-basis: 30%;
 }
 .choose-card{
-  /* border: 1px solid; */
   padding: 1rem;
 }
 .choose-card i {
@@ -1010,6 +1106,9 @@
   margin-bottom: 1rem;
 }
 @media screen and (max-width:822px) {
+  #why-choose{
+    margin: 0rem 1rem;
+  }
   .choose-subtitle{
     font-size: 4.8vmax;
   }
